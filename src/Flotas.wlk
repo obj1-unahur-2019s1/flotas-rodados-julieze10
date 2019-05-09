@@ -1,10 +1,11 @@
 class Corsa {
 	var property color
 	method capacidad(){return 4}
-	method velocidadMaxima(){return 150}
+	method velocidadMaxima()= 150
 	method peso(){return 1300}	
+	
 }
-class RenaultKwid{
+object renaultKwid{
 	var property peso = 1200
 	var property tanqueAdicional = false
 	
@@ -17,16 +18,17 @@ class RenaultKwid{
 	method peso(){
 		return if(tanqueAdicional){return peso} else {return 150}
 	}
-	method municipalidadColor(){return "azul"}
+	method color(){return "azul"}
 }
 
-class Trafic {
-	var property motor
-	var property interior
+object trafic {
+	var property interior = comodo
+	var property motor = pulenta
 	 
 	method capacidad(){return interior.capacidad()}
 	method velocidadMaxima(){return motor.velocidadMaxima()}
 	method peso(){return 4000 + interior.peso() + motor.peso()}
+	method color(){return "blanco"}
 }
 
 object comodo{
